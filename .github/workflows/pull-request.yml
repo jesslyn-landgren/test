@@ -1,7 +1,4 @@
 name: Example Pull Request Workflow
-# on:
-#   pull_request:
-#     types: [opened, edited, reopened]
 on: 
   push: 
     branches: 
@@ -11,10 +8,5 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: 'Jesslyn'
-        id: hello
       - name: Echo the greeting's time
-        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+        run: echo 'The time was now'
